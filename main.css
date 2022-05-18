@@ -1,8 +1,8 @@
 .column {
     width: 100px;
     height: 100px;
-    margin: 0px;
-    border: 2px black solid;
+    margin: 2px;
+    border: 2px rgb(99, 36, 175) dashed;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,4 +33,34 @@ body {
 
 #reset-button{
     margin-top: 10px;
+}
+
+.Players{
+    font-size: larger;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:rgb(99, 36, 175)
+}
+
+.nameBoxes{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: 2px; color: blueviolet;
+}
+
+#grid{
+    margin: 25px;
+}
+
+body{
+    background-color: rgba(255, 192, 203, 0.404);
+}
+
+h1{
+    color: rgb(99, 36, 175);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: xxx-large;
+}
+#warning{
+    color: rgb(99, 36, 175);
+    font-style: oblique;
+    font-size: large;
 }
