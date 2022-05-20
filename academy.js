@@ -9,17 +9,6 @@ let gameOver = false
 let noughtsTurn = true
 console.log("Noughts Turn")
 
-const winningConditions = [
-    [[0,0],[0,1],[0,2]],
-    [[1,0],[1,1],[1,2]],
-    [[2,0],[2,1],[2,2]],
-    [[0,0],[1,1],[2,2]],
-    [[0,2],[1,1],[2,0]],
-    [[0,0],[1,0],[2,0]],
-    [[0,1],[1,1],[2,1]],
-    [[0,2],[1,1],[1,2]]
-]
-
 // Take the row and column number between 0 and 2
 // (inclusive) and update the game state.
 function takeTurn(row, column) {
@@ -49,7 +38,7 @@ function checkWinner() {
 
     const horizontalWinner = checkHorizontalWinner()
     const verticalWinner = checkVerticalWinner()
-    // const diagonalWinner = checkDiagonalWinner()
+    const diagonalWinner = checkDiagonalWinner()
     
     if(horizontalWinner) {
     return horizontalWinner
@@ -57,15 +46,13 @@ function checkWinner() {
     else if(verticalWinner) {
     return verticalWinner
     }
+    else if(diagonalWinner) {
+        return diagonalWinner
+    }
     else{
-        alert ('draw')
+        return nobody
 }
 }
-    // else if (diagonalWinner) {
-    // return diagonalWinner
-    // }
-    // else return null
-
 
 const checkHorizontalWinner = () => {
     for(row =0; row < 3;  row++){
@@ -109,54 +96,26 @@ const checkMatchingColumn = (column) => {
     
     return firstRow === secondRow && firstRow === thirdRow && firstRow !==null
 }
-// const checkDiagonalWinner = () => {
-//     for(row =0; row < 3;  row++){
 
-//         if (checkDiagonalSpace(board)) {
-//             console.log('check row equals ', checkMatchingRow(row))
-//             if(noughtsTurn === false) {
-//                 return "noughts"
-//             } else {
-//                 return "crosses"
-//             }
-//         }
-//     }
-// }
+const checkDiagonalWinner = () => {
 
-// const checkDiagonalSpace = (row) => {
-//     const firstColumn = board[row][0][0]
-//     const secondColumn = board[row][1][1]
-//     const thirdColumn = board[row][2][2]
+    if (checkMatchingDiagonal()) {
+        if(noughtsTurn === false) {
+          return "noughts"
+     } else {
+         return "crosses"
+         }
+        }
+    }
     
-//     return firstColumn === secondColumn && firstColumn === thirdColumn && firstColumn !==null
-// }
-
-// for(column =0; column < 3;  column++){
-
-//     if (checkMatchingColumn(column)) {
-//         console.log('check column equals ', checkMatchingColumn(column))
-//         if(noughtsTurn === false) {
-//             return "noughts"
-//         } else {
-//             return "crosses"
-//         }
-//     }
-// }
-// const checkMatchingColumn = (column) => {
-// const firstRow = board[column][0]
-// const secondRow = board[column][1]
-// const thirdRow = board[column][2]
-
-// return firstRow === secondRow && firstRow === thirdRow && firstRow !==null
-// }
-
-
-
-
-
-
-
-
+    const checkMatchingDiagonal = () => {
+    const firstRow = board[0][0]
+    const secondRow = board[1][1]
+    const thirdRow = board[2][2]
+    
+    return firstRow === secondRow && firstRow === thirdRow && firstRow !==null
+    
+    }
 
 // Set the game state back to its original state to play another game.
 function resetGame(clearBoard) {
