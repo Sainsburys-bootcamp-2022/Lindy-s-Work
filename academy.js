@@ -50,7 +50,7 @@ function checkWinner() {
         return diagonalWinner
     }
     else{
-        return nobody
+        return null
 }
 }
 
@@ -112,8 +112,11 @@ const checkDiagonalWinner = () => {
     const firstRow = board[0][0]
     const secondRow = board[1][1]
     const thirdRow = board[2][2]
+    const fourthRow = board[0][2]
+    const fifthRow = board[1][1]
+    const sixthRow = board[2][0]
     
-    return firstRow === secondRow && firstRow === thirdRow && firstRow !==null
+    return firstRow === secondRow && firstRow === thirdRow && firstRow !==null || fourthRow === secondRow && fifthRow === sixthRow && fourthRow !==null 
     
     }
 
