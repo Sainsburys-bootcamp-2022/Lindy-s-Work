@@ -1,0 +1,46 @@
+.column {
+    width: 7vw;
+    height: 7vw;
+    margin: 0.4vw;
+    border: 2px rgb(3, 24, 252) solid;
+    border-radius: 50%/50%;
+    outline: 0.6vw double rgb(0, 149, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+}
+
+.row {
+    width: 800px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.marker {
+    width: 80px;
+    height: 80px;
+}
+
+#winner-display {
+    display: none;
+    background-color: red;
+    color: white;
+}
+
+body {
+    text-align: center;
+    background-color: rgba(224, 255, 255, 0.444);
+}
+
+#grid {
+    border:15px rgb(0, 149, 255) ridge;
+    border-radius: 25px;
+    padding: 1vw;
+    width: 63vw;
+    margin: auto;
+}
+#reset-button{
+    margin-top: 10px;
+}
