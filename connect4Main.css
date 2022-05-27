@@ -2,9 +2,9 @@
     width: 7vw;
     height: 7vw;
     margin: 0.4vw;
-    border: 2px rgb(3, 24, 252) solid;
+    border: 2px rgb(171, 140, 28) solid;
     border-radius: 50%/50%;
-    outline: 0.6vw double rgb(0, 149, 255);
+    outline: 0.6vw double rgb(252, 206, 3);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,7 +12,7 @@
 }
 
 .row {
-    width: 800px;
+    width: 1000px;
     margin: 0px auto;
     display: flex;
     justify-content: center;
@@ -31,16 +31,33 @@
 
 body {
     text-align: center;
-    background-color: rgba(224, 255, 255, 0.444);
+    background-image: url("https://images.all-free-download.com/images/graphiclarge/pets_background_dogs_bone_icons_decoration_repeating_style_6828678.jpg");
+    opacity: 1;
 }
 
 #grid {
-    border:15px rgb(0, 149, 255) ridge;
+    border:15px rgb(252, 206, 3) ridge;
     border-radius: 25px;
     padding: 1vw;
-    width: 63vw;
+    width: 53vw;
     margin: auto;
 }
 #reset-button{
     margin-top: 10px;
+}
+
+h1 {
+  color: rgb(255, 212, 18);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 60px;
+  display: flex; 
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  text-shadow: black 0px 0px 5px
+}
+
+.alignmentBox {
+display: flex;
+align-items: space-around;
+
 }

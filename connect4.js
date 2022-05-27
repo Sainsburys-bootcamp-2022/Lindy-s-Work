@@ -8,7 +8,14 @@ let board =[
 ]
 let gameOver = false
 let redsTurn = true
-console.log("Reds Turn")
+console.log('player1Name " Turn"')
+
+// const submit = document.getElementById("btn");
+
+// btn.addEventListener('click', function(){
+//   var name = document.getElementById("nameBoxes").value;
+//   alert("Name: "+ name);
+// });
 
 // Take the row and column number between 0 and 2
 // (inclusive) and update the game state.
@@ -20,15 +27,15 @@ function takeTurn(row, column) {
     for (let i = 5; i >= 0; i--) {
 console.log("loop start")
     if (board[i][column] === null && redsTurn) {
-        board[i][column] = "red"
+        board[i][column] = "player1Name"
         redsTurn = false
         console.log(board)
-        console.log("Yellows Turn")
+        console.log('player2Name "Turn"')
         break
     } else if (board[i][column] === null){
-        board[i][column] = "yellow"
+        board[i][column] = player2Name
         redsTurn = true
-        console.log("Reds Turn")
+        console.log('player1Name " Turn"')
         break
     } else {
         console.log("Space already taken")
@@ -67,9 +74,9 @@ const checkHorizontalWinner = () => {
         if (checkMatchingRow(row)) {
             console.log('check row equals ', checkMatchingRow(row))
             if(redsTurn === false) {
-                return "red"
+                return player1Name
             } else {
-                return "yellow"
+                return player2Name
             }
         }
     }
@@ -95,9 +102,9 @@ const checkVerticalWinner = () => {
         if (checkMatchingColumn(column)) {
             console.log('check column equals ', checkMatchingColumn(column))
             if(redsTurn === false) {
-                return "red"
+                return player1Name
             } else {
-                return "yellow"
+                return player2Name
             }
         }
     }
@@ -120,9 +127,9 @@ const checkDiagonalWinner = () => {
 
     if (checkMatchingDiagonal()) {
         if(redsTurn === false) {
-          return "red"
+          return player1Name
      } else {
-         return "yellow"
+         return player2Name
          }
         }
     }
