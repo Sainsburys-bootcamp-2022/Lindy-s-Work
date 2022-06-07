@@ -12,7 +12,7 @@
 }
 
 .row {
-    width: 1000px;
+    width: 800px;
     margin: 0px auto;
     display: flex;
     justify-content: center;
@@ -39,7 +39,7 @@ body {
     border:15px rgb(252, 206, 3) ridge;
     border-radius: 25px;
     padding: 1vw;
-    width: 53vw;
+    width: 57vw;
     margin: auto;
 }
 #reset-button{

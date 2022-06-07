@@ -1,3 +1,4 @@
+//Submit names
 function bothPlayer() {
     let redplayer = getPlayer1()
     let yellowplayer = getPlayer2()
@@ -7,11 +8,13 @@ function bothPlayer() {
 function getPlayer1() {
     const player1 = document.getElementById('player1Name').value;
     console.log(player1);
+    return player1
   }
 
   function getPlayer2() {
     const player2 = document.getElementById('player2Name').value;
     console.log(player2);
+    return player2
   }
 
 // Validate academite functions are available

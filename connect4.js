@@ -74,9 +74,9 @@ const checkHorizontalWinner = () => {
         if (checkMatchingRow(row)) {
             console.log('check row equals ', checkMatchingRow(row))
             if(redsTurn === false) {
-                return player1Name
+                return document.getElementById("player1Name").value
             } else {
-                return player2Name
+                return document.getElementById("player2Name").value
             }
         }
     }
@@ -102,9 +102,9 @@ const checkVerticalWinner = () => {
         if (checkMatchingColumn(column)) {
             console.log('check column equals ', checkMatchingColumn(column))
             if(redsTurn === false) {
-                return player1Name
+                return document.getElementById("player1Name").value
             } else {
-                return player2Name
+                return document.getElementById("player2Name").value
             }
         }
     }
@@ -127,9 +127,9 @@ const checkDiagonalWinner = () => {
 
     if (checkMatchingDiagonal()) {
         if(redsTurn === false) {
-          return player1Name
+          return document.getElementById("player1Name").value
      } else {
-         return player2Name
+         return document.getElementById("player2Name").value
          }
         }
     }
