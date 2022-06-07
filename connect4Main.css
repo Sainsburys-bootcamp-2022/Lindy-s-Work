@@ -61,3 +61,11 @@ display: flex;
 align-items: space-around;
 
 }
+
+.Players{
+font-family: monospace;
+font-size: 30px;
+font-weight: bolder;
+color: rgb(255, 212, 18);
+text-shadow: black 0px 0px 5px;
+}
