@@ -44,6 +44,14 @@ console.log("loop start")
     }
 }
 }
+function WelcomeMessage () {  
+    const hideMessage = document.getElementById("welcome-message");
+    if (hideMessage.style.display === "none") {
+        hideMessage.display="block";
+    }else {
+        hideMessage.style.display="none"
+    }
+}
 
 function showGrid() {
     const mainBodyAppear = document.getElementById("mainbody");
@@ -52,7 +60,8 @@ function showGrid() {
     } else {
         mainBodyAppear.style.display="block";
     }
-    }
+  
+}
 
 // Return either "noughts", "crosses" or "nobody" if the game is over.
 // Otherwise return null to continue playing.

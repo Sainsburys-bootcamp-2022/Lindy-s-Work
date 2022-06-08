@@ -88,3 +88,11 @@ font-weight: bolder;
 #mainbody{
     display: none
 }
+
+#welcome-message{
+    color: rgb(255, 212, 18);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 60px;
+    text-shadow: black 0px 0px 10px;
+    display: block
+}

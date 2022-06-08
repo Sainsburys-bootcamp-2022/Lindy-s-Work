@@ -86,7 +86,7 @@ function resetClick(event) {
     winnerDisplay.style.display = "None";
     const getPlayer1 = document.getElementById('player1Name').value=""
     const getPlayer2 = document.getElementById('player2Name').value=""
-    const showGrid = document.getElementById('mainbody')
+    const showGrid = document.getElementById('mainbody');
     showGrid.style.display="None";
     clearBoard();
 }
