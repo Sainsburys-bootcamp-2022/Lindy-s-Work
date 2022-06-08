@@ -88,6 +88,8 @@ function resetClick(event) {
     const getPlayer2 = document.getElementById('player2Name').value=""
     const showGrid = document.getElementById('mainbody');
     showGrid.style.display="None";
+    const welcomeMessage = document.getElementById('welcome-message');
+    welcomeMessage.style.display="block";
     clearBoard();
 }
 

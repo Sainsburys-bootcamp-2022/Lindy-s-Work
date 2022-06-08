@@ -44,7 +44,12 @@ console.log("loop start")
     }
 }
 }
-function WelcomeMessage () {  
+
+function buttonClick () {
+    welcomeMessage ();
+    showGrid ();
+}
+function welcomeMessage () {  
     const hideMessage = document.getElementById("welcome-message");
     if (hideMessage.style.display === "none") {
         hideMessage.display="block";
