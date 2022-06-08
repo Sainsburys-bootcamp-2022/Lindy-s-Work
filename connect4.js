@@ -45,6 +45,15 @@ console.log("loop start")
 }
 }
 
+function showGrid() {
+    const mainBodyAppear = document.getElementById("mainbody");
+    if (mainBodyAppear.style.display === "block") {
+        mainBodyAppear.display="none";
+    } else {
+        mainBodyAppear.style.display="block";
+    }
+    }
+
 // Return either "noughts", "crosses" or "nobody" if the game is over.
 // Otherwise return null to continue playing.
 function checkWinner() {

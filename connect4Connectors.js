@@ -84,6 +84,10 @@ function resetClick(event) {
     winnerName.innerText = "";
     const winnerDisplay = document.getElementById("winner-display");
     winnerDisplay.style.display = "None";
+    const getPlayer1 = document.getElementById('player1Name').value=""
+    const getPlayer2 = document.getElementById('player2Name').value=""
+    const showGrid = document.getElementById('mainbody')
+    showGrid.style.display="None";
     clearBoard();
 }
 
