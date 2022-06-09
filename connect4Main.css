@@ -26,7 +26,7 @@
 #winner-display {
     font-family: monospace;
     display: none;
-    border:15px rgb(252, 206, 3) ridge;
+    border: 15px rgb(252, 206, 3) ridge;
     border-radius: 15px;
     font-size: 40px;
     font-weight: bolder;
@@ -37,59 +37,60 @@
 body {
     text-align: center;
     background-image: url("https://images.all-free-download.com/images/graphiclarge/pets_background_dogs_bone_icons_decoration_repeating_style_6828678.jpg");
-    background-color: black; 
+    background-color: black;
     filter: brightness(105%)
 }
 
 #grid {
-    border:15px rgb(252, 206, 3) ridge;
+    border: 15px rgb(252, 206, 3) ridge;
     border-radius: 25px;
     padding: 1vw;
     width: 57vw;
     margin: auto;
     filter: drop-shadow(10px 10px 10px black);
 }
-#reset-button{
+
+#reset-button {
     margin-top: 10px;
 }
 
 .header {
-  color: rgb(255, 212, 18);
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-size: 60px;
-  display: flex; 
-  writing-mode: vertical-lr;
-  text-orientation: upright;
-  text-shadow: black 0px 0px 10px;
+    color: rgb(255, 212, 18);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 60px;
+    display: flex;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    text-shadow: black 0px 0px 10px;
 }
 
 .alignmentBox {
-display: flex;
-align-items: space-around;
+    display: flex;
+    align-items: space-around;
 
 }
 
-.Players{
-font-family: monospace;
-font-size: 30px;
-font-weight: bolder;
-color: rgb(255, 212, 18);
-text-shadow: black 0px 0px 10px;
+.Players {
+    font-family: monospace;
+    font-size: 30px;
+    font-weight: bolder;
+    color: rgb(255, 212, 18);
+    text-shadow: black 0px 0px 10px;
 }
 
 #submitbtn {
-font-family: monospace;
-font-size: large;
-color:rgb(255, 212, 18);
-text-shadow:black 0px 0px 5px;
-font-weight: bolder;
+    font-family: monospace;
+    font-size: large;
+    color: rgb(255, 212, 18);
+    text-shadow: black 0px 0px 5px;
+    font-weight: bolder;
 }
 
-#mainbody{
+#mainbody {
     display: none
 }
 
-#welcome-message{
+#welcome-message {
     color: rgb(255, 212, 18);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 60px;

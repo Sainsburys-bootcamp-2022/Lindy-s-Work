@@ -9,21 +9,12 @@ function getPlayer1() {
     const player1 = document.getElementById('player1Name').value;
     console.log(player1);
     return player1
-  }
+}
 
-  function getPlayer2() {
+function getPlayer2() {
     const player2 = document.getElementById('player2Name').value;
     console.log(player2);
     return player2
-  }
-
-// Validate academite functions are available
-const functions = ["takeTurn", "getBoard", "checkWinner", "resetGame"];
-for (f of functions) {
-    const functionObject = window[f];
-    if (typeof functionObject !== "function") {
-        throw `Looks like expected function '${f}' is missing. Double check the function signatures from academy.js are still present and unaltered.`;
-    }
 }
 
 // Clear down the elements drawn on the board.
@@ -49,10 +40,6 @@ function drawBoard(board) {
     }
 }
 
-function isValidRowOrColumn(array) {
-    return Array.isArray(array) && array.length === 7;
-}
-
 function isValidColumn(columnArray) {
     return isValidRowOrColumn(columnArray) && columnArray.every(function (item) { return [player1Name, player2Name, null].includes(item); });
 }
@@ -61,15 +48,10 @@ function isValidColumn(columnArray) {
 function positionClick(rowIndex, columnIndex, event) {
     takeTurn(rowIndex, columnIndex);
     const board = getBoard();
-    // if (!isValidRowOrColumn(board) || !board.every(isValidColumn)) {
-    //     throw "Expecting 'getBoard' to return a 2d array where all values match are null or one of the strings 'red' or 'yellow'. Actually received: " + JSON.stringify(board);
-    // }
+
     drawBoard(board);
     const winner = checkWinner();
     if (winner) {
-        // if (typeof winner !== "string" || ![player1Name, player2Name, 'nobody'].includes(winner)) {
-        //     throw "Expecting 'checkWinner' to return null or one of the strings 'player1Name', 'player2Name' or 'nobody'. Actually received: " + winner;
-        // }
         const winnerName = document.getElementById("winner-name");
         winnerName.innerText = winner;
         const winnerDisplay = document.getElementById("winner-display");
@@ -84,12 +66,12 @@ function resetClick(event) {
     winnerName.innerText = "";
     const winnerDisplay = document.getElementById("winner-display");
     winnerDisplay.style.display = "None";
-    const getPlayer1 = document.getElementById('player1Name').value=""
-    const getPlayer2 = document.getElementById('player2Name').value=""
+    const getPlayer1 = document.getElementById('player1Name').value = ""
+    const getPlayer2 = document.getElementById('player2Name').value = ""
     const showGrid = document.getElementById('mainbody');
-    showGrid.style.display="None";
+    showGrid.style.display = "None";
     const welcomeMessage = document.getElementById('welcome-message');
-    welcomeMessage.style.display="block";
+    welcomeMessage.style.display = "block";
     clearBoard();
 }
 
@@ -123,3 +105,4 @@ if (typeof exports === 'object') {
 } else {
     console.log("Running in Browser")
 }
+
