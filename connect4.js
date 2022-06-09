@@ -8,14 +8,19 @@ let board = [
 ]
 let gameOver = false
 let redsTurn = true
+let winnerStatus = false 
 console.log('player1Name " Turn"')
 
 // Take the row and column number between 0 and 2
 // (inclusive) and update the game state.
 function takeTurn(row, column) {
+    if (winnerStatus === true) {
+        return
+    }
+
     if (!gameOver) {
-        console.log("takeTurn was called with row: " + row + ", column:" + column);
-        console.log(`takeTurn was called with row: ${row}, column: ${column}`);
+    //     console.log("takeTurn was called with row: " + row + ", column:" + column);
+    //     console.log(`takeTurn was called with row: ${row}, column: ${column}`);
 
         for (let i = 5; i >= 0; i--) {
             console.log("loop start")
@@ -91,7 +96,7 @@ const checkHorizontalWinner = () => {
             console.log('check row equals ', checkMatchingRow(row))
             if (redsTurn === false) {
                 return document.getElementById("player1Name").value
-            } else {
+            } else { winnerStatus = true
                 return document.getElementById("player2Name").value
             }
         }

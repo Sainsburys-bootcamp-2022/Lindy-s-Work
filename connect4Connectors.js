@@ -56,6 +56,7 @@ function positionClick(rowIndex, columnIndex, event) {
         winnerName.innerText = winner;
         const winnerDisplay = document.getElementById("winner-display");
         winnerDisplay.style.display = "block";
+        gameOver = true;
     }
 }
 
@@ -72,6 +73,7 @@ function resetClick(event) {
     showGrid.style.display = "None";
     const welcomeMessage = document.getElementById('welcome-message');
     welcomeMessage.style.display = "block";
+    gameOver = false
     clearBoard();
 }
 
@@ -97,7 +99,6 @@ if (typeof exports === 'object') {
     module.exports = {
         clearBoard,
         drawBoard,
-        isValidRowOrColumn,
         isValidColumn,
         positionClick,
         resetClick,
