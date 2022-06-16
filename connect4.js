@@ -89,10 +89,9 @@ function checkWinner() {
     }
         
         function draw () {
-            const drawText = document.getElementById("draw-display") 
+            let winner = document.getElementById("winner-name");
         if (turnCount >= 42) {
-            return document.getElementById("draw-display"), 
-            drawText.style.display = 'none'
+            return winner.innerText = "nobody! Try again!";
         } 
     }
     
