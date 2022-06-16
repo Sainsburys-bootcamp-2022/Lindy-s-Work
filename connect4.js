@@ -8,6 +8,7 @@ let board = [
 ]
 let gameOver = false
 let redsTurn = true
+let turnCount = 0
 console.log('player1Name " Turn"')
 
 // Take the row and column number between 0 and 2
@@ -34,6 +35,8 @@ function takeTurn(row, column) {
             }
         }
     }
+    turnCount++;
+    console.log(turnCount)
 }
 
 function buttonClick() {
@@ -63,37 +66,38 @@ function showGrid() {
 // Otherwise return null to continue playing.
 function checkWinner() {
 
-
     const horizontalWinner = checkHorizontalWinner()
     const verticalWinner = checkVerticalWinner()
     const diagonalWinner = checkDiagonalWinner()
+    const drawWinner = draw()
 
-    if (horizontalWinner) {
+    if (diagonalWinner) {
+        return diagonalWinner
+    }
+    else if(horizontalWinner) {
         return horizontalWinner
     }
     else if (verticalWinner) {
         return verticalWinner
     }
-    else if (diagonalWinner) {
-        return diagonalWinner
+    else if (drawWinner) {
+        return drawWinner
     }
-    // else if (!diagonalWinner || !horizontalWinner || !verticalWinner &&  fullBoard) {
-    //     return (document.getElementById("draw"))
-    // }
     else {
         return null
     }
     }
-
-
-// const fullBoard = [
-//     [!null, !null, !null, !null, !null, !null, !null],
-//     [!null, !null, !null, !null, !null, !null, !null],
-//     [!null, !null, !null, !null, !null, !null, !null],
-//     [!null, !null, !null, !null, !null, !null, !null],
-//     [!null, !null, !null, !null, !null, !null, !null],
-//     [!null, !null, !null, !null, !null, !null, !null],
-// ]
+        
+        function draw () {
+            const drawText = document.getElementById("draw-display") 
+        if (turnCount >= 42) {
+            return document.getElementById("draw-display"), 
+            drawText.style.display = 'none'
+        } 
+    }
+    
+        
+    
 const checkHorizontalWinner = () => {
     for (row = 0; row < 6; row++) {
 

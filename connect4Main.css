@@ -34,6 +34,17 @@
     text-shadow: black 0px 0px 10px;
 }
 
+#draw-display {
+    font-family: monospace;
+    display: none;
+    border: 15px rgb(252, 206, 3) ridge;
+    border-radius: 15px;
+    font-size: 40px;
+    font-weight: bolder;
+    color: rgb(255, 212, 18);
+    text-shadow: black 0px 0px 10px;
+}
+
 body {
     text-align: center;
     background-image: url("https://images.all-free-download.com/images/graphiclarge/pets_background_dogs_bone_icons_decoration_repeating_style_6828678.jpg");

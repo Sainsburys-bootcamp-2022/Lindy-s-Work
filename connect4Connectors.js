@@ -73,7 +73,8 @@ function resetClick(event) {
     showGrid.style.display = "None";
     const welcomeMessage = document.getElementById('welcome-message');
     welcomeMessage.style.display = "block";
-    gameOver = false
+    gameOver = false;
+    turnCount = 0
     clearBoard();
 }
 
