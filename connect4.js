@@ -9,8 +9,12 @@ let board = [
 let gameOver = false
 let redsTurn = true
 let turnCount = 0
-console.log('player1Name " Turn"')
+let gameCount = 0
+let gameCountDisplay = document.querySelector('.game-count-display');
 
+function updateGameCount(){
+    gameCountDisplay.innerHTML = gameCount;
+};
 // Take the row and column number between 0 and 2
 // (inclusive) and update the game state.
 function takeTurn(row, column) {
@@ -42,6 +46,7 @@ function takeTurn(row, column) {
 function buttonClick() {
     welcomeMessage();
     showGrid();
+    hideSubmitbn()
 }
 function welcomeMessage() {
     const hideMessage = document.getElementById("welcome-message");
@@ -49,6 +54,15 @@ function welcomeMessage() {
         hideMessage.display = "block";
     } else {
         hideMessage.style.display = "none"
+    }
+}
+
+function hideSubmitbn() {
+    const hideSubmit = document.getElementById("submitbtn");
+    if (hideSubmit.style.display === "none") {
+        hideSubmit.display = "block";
+    } else {
+        hideSubmit.style.display = "none"
     }
 }
 
@@ -237,6 +251,17 @@ const checkMatchingDiagonal = () => {
 // Set the game state back to its original state to play another game.
 function resetGame(clearBoard) {
     console.log("resetGame was called");
+    board =
+        [[null, null, null, null, null, null, null],
+        [null, null, null, null, null, null, null],
+        [null, null, null, null, null, null, null],
+        [null, null, null, null, null, null, null],
+        [null, null, null, null, null, null, null],
+        [null, null, null, null, null, null, null]]
+}
+
+function newGame(clearBoard) {
+    console.log("newGame was called");
     board =
         [[null, null, null, null, null, null, null],
         [null, null, null, null, null, null, null],

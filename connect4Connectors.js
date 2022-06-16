@@ -73,10 +73,25 @@ function resetClick(event) {
     showGrid.style.display = "None";
     const welcomeMessage = document.getElementById('welcome-message');
     welcomeMessage.style.display = "block";
+    const hideSubmitbn = document.getElementById("submitbtn");
+    hideSubmitbn.style.display = "block"
     gameOver = false;
     turnCount = 0
+    gameCount = 0
     clearBoard();
 }
+
+function newGameClick(event) {
+    newGame();
+    const winnerName = document.getElementById("winner-name");
+    winnerName.innerText = "";
+    const winnerDisplay = document.getElementById("winner-display");
+    winnerDisplay.style.display = "None";
+    gameOver = false;
+    gameCount++;
+    console.log(gameCount)
+    clearBoard();
+} 
 
 // Bind the click events for the grid.
 for (let rowIndex = 0; rowIndex < 6; rowIndex++) {
@@ -93,6 +108,10 @@ resetButton.addEventListener("click", resetClick);
 const submitbtn = document.getElementById("submitbtn");
 submitbtn.addEventListener("click", bothPlayer);
 
+const newGameButton = document.getElementById("new-game-button");
+newGameButton.addEventListener("click", newGameClick);
+newGameButton.addEventListener("click", updateGameCount);
+
 if (typeof exports === 'object') {
     console.log("Running in Node")
     // Node. Does not work with strict CommonJS, but only CommonJS-like 
@@ -103,6 +122,7 @@ if (typeof exports === 'object') {
         isValidColumn,
         positionClick,
         resetClick,
+        newGameClick
     }
 } else {
     console.log("Running in Browser")
