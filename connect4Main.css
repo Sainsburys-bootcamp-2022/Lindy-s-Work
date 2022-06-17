@@ -95,7 +95,9 @@ body {
     color: rgb(255, 212, 18);
     text-shadow: black 0px 0px 5px;
     font-weight: bolder;
-    display: block
+    display: none;
+    display: flex;
+    align-items: center;
 }
 
 #mainbody {
@@ -108,4 +110,10 @@ body {
     font-size: 60px;
     text-shadow: black 0px 0px 10px;
     display: block
+}
+
+.game-count-display {
+    color: rgb(255, 212, 18);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: black 0px 0px 10px;
 }

@@ -46,7 +46,8 @@ function takeTurn(row, column) {
 function buttonClick() {
     welcomeMessage();
     showGrid();
-    hideSubmitbn()
+    hideSubmitbn(); 
+    showGameCounter()
 }
 function welcomeMessage() {
     const hideMessage = document.getElementById("welcome-message");
@@ -73,6 +74,16 @@ function showGrid() {
     } else {
         mainBodyAppear.style.display = "block";
     }
+
+}
+
+function showGameCounter() {
+    const gameCounter = document.getElementById("game-count-display");
+    // if (gameCounter.style.display === "none") {
+    //     gameCounter.display = "block";
+    // } else {
+    //     gameCounter.style.display = "none";
+    // }
 
 }
 
