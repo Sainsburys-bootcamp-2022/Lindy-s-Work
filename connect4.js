@@ -47,7 +47,7 @@ function buttonClick() {
     welcomeMessage();
     showGrid();
     hideSubmitbn(); 
-    showGameCounter()
+    showGameCounter();
 }
 function welcomeMessage() {
     const hideMessage = document.getElementById("welcome-message");
@@ -73,17 +73,16 @@ function showGrid() {
         mainBodyAppear.display = "none";
     } else {
         mainBodyAppear.style.display = "block";
-    }
-
+    };
 }
 
 function showGameCounter() {
     const gameCounter = document.getElementById("game-count-display");
-    // if (gameCounter.style.display === "none") {
-    //     gameCounter.display = "block";
-    // } else {
-    //     gameCounter.style.display = "none";
-    // }
+//     if (gameCounter.style.display === "block") {
+//         gameCounter.display = "block";
+//     } else {
+//         gameCounter.style.display = "none";
+//     }
 
 }
 

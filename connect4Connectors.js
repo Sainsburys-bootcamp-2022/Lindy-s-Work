@@ -89,7 +89,6 @@ function newGameClick(event) {
     winnerDisplay.style.display = "None";
     gameOver = false;
     gameCount++;
-    console.log(gameCount)
     clearBoard();
 } 
 
@@ -104,6 +103,7 @@ for (let rowIndex = 0; rowIndex < 6; rowIndex++) {
 // Bind the click event for the reset button.
 const resetButton = document.getElementById("reset-button");
 resetButton.addEventListener("click", resetClick);
+resetButton.addEventListener("click", updateGameCount);
 
 const submitbtn = document.getElementById("submitbtn");
 submitbtn.addEventListener("click", bothPlayer);
