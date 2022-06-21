@@ -10,11 +10,24 @@ let gameOver = false
 let redsTurn = true
 let turnCount = 0
 let gameCount = 0
+let dogWin = 0
+let catWin = 0
 let gameCountDisplay = document.querySelector('.game-count-display');
+let dogWinDisplay = document.querySelector('.dog-win-count-display');
+let catWinDisplay = document.querySelector('.cat-win-count-display')
 
 function updateGameCount(){
     gameCountDisplay.innerHTML = gameCount;
 };
+
+function updateDogWinCount() {
+    dogWinDisplay.innerHTML = dogWin; 
+}
+
+function updateCatWinCount() {
+    catWinDisplay.innerHTML = catWin; 
+}
+
 // Take the row and column number between 0 and 2
 // (inclusive) and update the game state.
 function takeTurn(row, column) {
@@ -78,12 +91,6 @@ function showGrid() {
 
 function showGameCounter() {
     const gameCounter = document.getElementById("game-count-display");
-//     if (gameCounter.style.display === "block") {
-//         gameCounter.display = "block";
-//     } else {
-//         gameCounter.style.display = "none";
-//     }
-
 }
 
 // Return either "noughts", "crosses" or "nobody" if the game is over.
@@ -126,10 +133,12 @@ const checkHorizontalWinner = () => {
 
         if (checkMatchingRow(row)) {
             console.log('check row equals ', checkMatchingRow(row))
-            if (redsTurn === false) {
-                return document.getElementById("player1Name").value
-            } else { winnerStatus = true
-                return document.getElementById("player2Name").value
+            if (redsTurn === false) { 
+                dogWin++
+                return document.getElementById("player1Name").value;
+            }else { winnerStatus = true;
+                catWin++
+                return document.getElementById("player2Name").value;
             }
         }
     }
@@ -155,8 +164,10 @@ const checkVerticalWinner = () => {
         if (checkMatchingColumn(column)) {
             console.log('check column equals ', checkMatchingColumn(column))
             if (redsTurn === false) {
+                dogWin++
                 return document.getElementById("player1Name").value
             } else {
+                catWin++
                 return document.getElementById("player2Name").value
             }
         }

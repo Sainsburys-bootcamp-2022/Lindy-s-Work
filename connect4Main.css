@@ -117,3 +117,36 @@ body {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-shadow: black 0px 0px 10px;
 }
+
+#Games-Played {
+    color: rgb(255, 212, 18);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: x-large;
+    text-shadow: black 0px 0px 10px;
+}
+
+#dog-win {
+    color: rgb(255, 212, 18);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: x-large;
+    text-shadow: black 0px 0px 10px;    
+}
+
+#cat-win {
+    color: rgb(255, 212, 18);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: x-large;
+    text-shadow: black 0px 0px 10px;    
+}
+
+.dog-win-count-display{
+    color: rgb(255, 212, 18);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: black 0px 0px 10px;
+}
+
+.cat-win-count-display{
+    color: rgb(255, 212, 18);
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+text-shadow: black 0px 0px 10px;
+}

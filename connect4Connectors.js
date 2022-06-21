@@ -26,6 +26,9 @@ function clearBoard() {
     }
 }
 
+
+document.addEventListener('DOMContentLoaded', resetGame())
+
 // Populate the grid with images based on the board state.
 function drawBoard(board) {
     clearBoard();
@@ -111,6 +114,8 @@ submitbtn.addEventListener("click", bothPlayer);
 const newGameButton = document.getElementById("new-game-button");
 newGameButton.addEventListener("click", newGameClick);
 newGameButton.addEventListener("click", updateGameCount);
+newGameButton.addEventListener("click", updateDogWinCount);
+newGameButton.addEventListener("click", updateCatWinCount)
 
 if (typeof exports === 'object') {
     console.log("Running in Node")
