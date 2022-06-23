@@ -78,9 +78,13 @@ function resetClick(event) {
     welcomeMessage.style.display = "block";
     const hideSubmitbn = document.getElementById("submitbtn");
     hideSubmitbn.style.display = "block"
+    const gameCounters = document.getElementById('game-Counters');
+    gameCounters.style.display = "None";
     gameOver = false;
     turnCount = 0
     gameCount = 0
+    dogWin = 0
+    catWin = 0
     clearBoard();
 }
 
@@ -107,6 +111,8 @@ for (let rowIndex = 0; rowIndex < 6; rowIndex++) {
 const resetButton = document.getElementById("reset-button");
 resetButton.addEventListener("click", resetClick);
 resetButton.addEventListener("click", updateGameCount);
+resetButton.addEventListener("click", updateDogWinCount);
+resetButton.addEventListener("click", updateCatWinCount);
 
 const submitbtn = document.getElementById("submitbtn");
 submitbtn.addEventListener("click", bothPlayer);

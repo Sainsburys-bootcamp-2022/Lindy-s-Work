@@ -5,26 +5,37 @@
      <title>Connect 4</title>
      <meta content="text/html; charset=utf-8" http-equiv="content-type">
      <link href="connect4Main.css" rel="stylesheet" type="text/css">
+
 </head>
 
 <body>
-     <div id="topImage"><img src="https://www.logolynx.com/images/logolynx/s_f7/f7820cc026b004afbe49c6b14e1a64f6.jpeg">
-          </br></div>
+
+     <img src="https://www.logolynx.com/images/logolynx/s_f7/f7820cc026b004afbe49c6b14e1a64f6.jpeg"
+          class="counterImage">
      <img src="https://www.logolynx.com/images/logolynx/af/af99ef1a19d2f3ae098f4a25ee3a79c8.gif">
+     <img src="https://www.logolynx.com/images/logolynx/s_f7/f7820cc026b004afbe49c6b14e1a64f6.jpeg"
+          class="counterImage">
      <p id="welcome-message"> Welcome to The Pet Edition of Connect 4</br> Please enter your names to start playing!</p>
+     </br>
      <p div class="Players">Dogs 🐶</p><input type="text" id="player1Name" name="text_name" placeholder="Name"
           oninput="getPlayer1()" required minlength="4" maxlength="26" size="25">
      <p div class="Players">Cats 🐱</p> <input type="text" id="player2Name" name="text_name" placeholder="Name"
-          oninput="getPlayer2()" required minlength="4" maxlength="26" size="25"></br>
-     <p id="Games-Played"> Games Played: </p><h1 class="game-count-display">(..)</h1> 
-     </br>
+          oninput="getPlayer2()" required minlength="4" maxlength="26" size="25"> </br>
+     <div id="game-Counters">
+          <p id="Games-Played"> Games Played: </p>
+          <h1 class="game-count-display">(..)</h1>
+          <p id="dog-win">Dog Wins: </p>
+          <h1 class="dog-win-count-display">(..) </h1>
+          <p id="cat-win">Cat Wins: </p>
+          <h1 class="cat-win-count-display">(..) </h1>
+     </div>
      <button id="submitbtn" onclick="buttonClick()">Submit</button>
      <p id="winner-display">🐟🦴The winner is <span id="winner-name"></span>🦴🐟</p>
      <p id="draw-display">🐟🦴Nodoby Wins🦴🐟</p>
      <div id="mainbody">
           <div class="alignmentBox">
                <h1 class="header"> The Pet Edition</h1>
-               <p id="dog-win"> Dog Wins: </p><h1 class="dog-win-count-display">(..)</h1> 
+
                <div id="grid">
                     <div class="row" id="row-0">
                          <div class="column" id="row-0-column-0"></div>
@@ -81,7 +92,7 @@
                          <div class="column" id="row-5-column-6"></div>
                     </div>
                </div>
-               <p id="cat-win"> Cat Wins: </p><h1 class="cat-win-count-display">(..)</h1> 
+
                <h1 class="header"> The Pet Edition</h1>
           </div>
           <button id="reset-button">Reset</button>\

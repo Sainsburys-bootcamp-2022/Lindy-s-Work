@@ -46,10 +46,11 @@
 }
 
 body {
+    background-image: url(https://image.shutterstock.com/image-photo/group-cats-dogs-front-white-260nw-91233320.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
     text-align: center;
-    background-image: url("https://images.all-free-download.com/images/graphiclarge/pets_background_dogs_bone_icons_decoration_repeating_style_6828678.jpg");
-    background-color: black;
-    filter: brightness(105%)
+    background-size: 100vw;
 }
 
 #grid {
@@ -78,7 +79,6 @@ body {
 .alignmentBox {
     display: flex;
     align-items: space-around;
-
 }
 
 .Players {
@@ -87,6 +87,8 @@ body {
     font-weight: bolder;
     color: rgb(255, 212, 18);
     text-shadow: black 0px 0px 10px;
+    display: inline-block;
+    padding: 1vw
 }
 
 #submitbtn {
@@ -97,7 +99,8 @@ body {
     font-weight: bolder;
     display: none;
     display: flex;
-    align-items: center;
+    align-self: center;
+    display: inline-block;
 }
 
 #mainbody {
@@ -108,14 +111,21 @@ body {
     color: rgb(255, 212, 18);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 60px;
-    text-shadow: black 0px 0px 10px;
-    display: block
+    text-shadow: black 0px 0px 50px;
+    display: block;
+}
+
+#game-Counters {
+    display: none;
 }
 
 .game-count-display {
     color: rgb(255, 212, 18);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-shadow: black 0px 0px 10px;
+    display: inline-block;
+    padding-left: 1vw;
+    padding-right: 0.5vw
 }
 
 #Games-Played {
@@ -123,6 +133,7 @@ body {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: x-large;
     text-shadow: black 0px 0px 10px;
+    display: inline-block;
 }
 
 #dog-win {
@@ -130,23 +141,36 @@ body {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: x-large;
     text-shadow: black 0px 0px 10px;    
+    display: inline-block;
+    padding: 0.5vw
 }
 
 #cat-win {
     color: rgb(255, 212, 18);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: x-large;
-    text-shadow: black 0px 0px 10px;    
+    text-shadow: black 0px 0px 10px;  
+    display: inline-block;
+    padding-left: 0.5vw
 }
 
 .dog-win-count-display{
     color: rgb(255, 212, 18);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-shadow: black 0px 0px 10px;
+    display: inline-block;
+    padding: 0.5vw
 }
 
 .cat-win-count-display{
     color: rgb(255, 212, 18);
-font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-text-shadow: black 0px 0px 10px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: black 0px 0px 10px;
+    display: inline-block;
+    padding: 1vw
+}
+
+.counterImage {
+    height: 10vw;
+    width: 10vw
 }

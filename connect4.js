@@ -61,6 +61,7 @@ function buttonClick() {
     showGrid();
     hideSubmitbn(); 
     showGameCounter();
+    gameCounters()
 }
 function welcomeMessage() {
     const hideMessage = document.getElementById("welcome-message");
@@ -68,6 +69,16 @@ function welcomeMessage() {
         hideMessage.display = "block";
     } else {
         hideMessage.style.display = "none"
+    }
+}
+
+function gameCounters() {
+    const hideCounters = document.getElementById("game-Counters");
+    console.log(hideCounters)
+    if (hideCounters.style.display === "block") {
+        hideCounters.display = "none";
+    } else {
+        hideCounters.style.display = "block"
     }
 }
 
