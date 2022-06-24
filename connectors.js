@@ -68,6 +68,7 @@ function resetClick(event) {
     winnerName.innerText = "";
     const winnerDisplay = document.getElementById("winner-display");
     winnerDisplay.style.display = "None";
+    turnCount = 0
     clearBoard();
 }
 

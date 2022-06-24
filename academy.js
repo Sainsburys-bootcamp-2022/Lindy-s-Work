@@ -7,6 +7,7 @@ let board =[
 ]
 let gameOver = false
 let noughtsTurn = true
+let turnCount = 0
 console.log("Noughts Turn")
 
 // Take the row and column number between 0 and 2
@@ -30,6 +31,8 @@ function takeTurn(row, column) {
         console.log(board)
     }
     }
+    turnCount++
+    console.log(turnCount)
 }
 
 // Return either "noughts", "crosses" or "nobody" if the game is over.
@@ -39,6 +42,7 @@ function checkWinner() {
     const horizontalWinner = checkHorizontalWinner()
     const verticalWinner = checkVerticalWinner()
     const diagonalWinner = checkDiagonalWinner()
+    const drawWinner = draw()
     
     if(horizontalWinner) {
     return horizontalWinner
@@ -48,12 +52,21 @@ function checkWinner() {
     }
     else if(diagonalWinner) {
         return diagonalWinner
-    }
+    } 
+    else if (drawWinner) {
+        return drawWinner
+    } 
     else{
         return null
 }
 }
 
+function draw () {
+    let winner = document.getElementById("winner-name");
+if (turnCount >= 9) {
+    return winner.innerText = "nobody";
+} 
+}
 const checkHorizontalWinner = () => {
     for(row =0; row < 3;  row++){
 
